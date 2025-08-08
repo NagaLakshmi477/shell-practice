@@ -33,22 +33,22 @@ else
 echo " No need to installed it is already installed"
 
 
-dnf list installed  mysql
+dnf list installed  nginx
 
 if [ $? -ne 0 ]
 then
-    echo " Mysql is not installed -.....Going to install"
+    echo " nginx is not installed -.....Going to install"
     VALIDATE $? "nginx"
 else
 echo " No need to installed it is already installed"
 
 
-dnf list installed  mysql
+dnf list installed  python3
 
 if [ $? -ne 0 ]
 then
-    echo " Mysql is not installed -.....Going to install"
-    dnf install mysql
+    echo " python3 is not installed -.....Going to install"
+    dnf install python3
     VALIDATE $? "python3"
 else
 echo " No need to installed it is already installed"
