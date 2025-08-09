@@ -43,17 +43,18 @@ then
     VALIDATE $? "mysql"
 else
 echo -e " $G No need to installed it is already installed $N " | tee -a $LOG_FILE
-
+fi
 
 dnf list installed  nginx  
 
 if [ $? -ne 0 ]
 then
     echo -e " $R nginx is not installed -.....Going to install $N " | tee -a $LOG_FILE
+    dnf install nginx
     VALIDATE $? "nginx" &>> $LOG_FILE
 else
 echo -e " $G No need to installed it is already installed $N " | tee -a $LOG_FILE
-
+fi
 
 dnf list installed  python3
 
@@ -64,3 +65,4 @@ then
     VALIDATE $? "python3"
 else
 echo "$G No need to installed it is already installed $N" | tee -a $LOG_FILE
+fi
