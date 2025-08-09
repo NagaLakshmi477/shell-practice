@@ -28,5 +28,5 @@ then
     fi
 else
 echo " No need to installed it is already installed"
-
+fi 
 
