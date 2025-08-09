@@ -36,7 +36,7 @@ then
     VALIDATE $? "mysql"
 else
 echo -e " $G No need to installed it is already installed $N "
-
+fi
 
 dnf list installed  nginx
 
@@ -46,7 +46,7 @@ then
     VALIDATE $? "nginx"
 else
 echo -e " $G No need to installed it is already installed $N "
-
+fi
 
 dnf list installed  python3
 
@@ -57,3 +57,4 @@ then
     VALIDATE $? "python3"
 else
 echo "$G No need to installed it is already installed $N"
+fi
