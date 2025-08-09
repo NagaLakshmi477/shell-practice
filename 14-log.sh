@@ -64,5 +64,5 @@ then
     dnf install python3 &>> $LOG_FILE
     VALIDATE $? "python3"
 else
-echo "$G No need to installed it is already installed $N" | tee -a $LOG_FILE
+echo -e "$G No need to installed it is already installed $N" | tee -a $LOG_FILE
 fi
