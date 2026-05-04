@@ -9,18 +9,12 @@ else
     echo " Error:Running with normal user"
 fi
 
-if [ $? -eq 0 ]; then
-
-
-    dnf install mysql -y
+dnf install mysql -y
     if [ $? -eq 0 ];then
 
-    echo " mysql installed sucessfully"
+        echo " mysql installed sucessfully"
     else
         echo " failed to install "
+        exit 1
     fi
 
-else
-    echo " mysql not installed"
-    exit 1
-fi
