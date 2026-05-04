@@ -16,6 +16,8 @@ if [ $? -eq 0 ]; then
     if [ $? -eq 0 ];then
 
     echo " mysql installed sucessfully"
+    else
+        echo " failed to install "
     fi
 
 else
