@@ -25,7 +25,7 @@ if [ $? -ne 0 ]; then
 
 else
     echo " Nginx already installed "
-    exit 1
+     
 fi
 
 
