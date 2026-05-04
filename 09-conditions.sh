@@ -9,7 +9,13 @@ else
     echo " Error:Running with normal user"
 fi
 
-dnf install mysql -y
+dnf installed list nginx
+if [ $? -eq 0 ]; then
+    echo " Mysql is already installed "
+else
+    echo " mysql is not installed previously "
+
+dnf install nginx -y
     if [ $? -eq 0 ];then
 
         echo " mysql installed sucessfully"
