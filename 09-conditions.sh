@@ -9,7 +9,7 @@ else
     echo " Error:Running with normal user"
 fi
 
-dnf install mysql -y
+dnf install mysq -y
     if [ $? -eq 0 ];then
 
         echo " mysql installed sucessfully"
