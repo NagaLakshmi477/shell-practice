@@ -11,7 +11,9 @@ fi
 
 if [ $? -eq 0 ]; then
 
+
     dnf install mysqlu
+    if [ $? -eq 0 ];then
 
     echo " mysql installed sucessfully"
 
