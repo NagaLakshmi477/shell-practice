@@ -4,7 +4,14 @@
 USER_ID=$(id -u)
 
 if [ $USER_ID -eq 0 ]; then
-    echo " Running with root user"
+    echo " Sucess: Running with root user" 
 else
-    echo " Running with normal user"
+    echo " Error:Running with normal user"
+fi
+
+if [ $? -eq 0 ]; then
+    dnf install mysql -y
+    echo " mysql installed sucessfully"
+else
+    echo " mysql not installed"
 fi
