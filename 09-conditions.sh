@@ -10,17 +10,23 @@ else
 fi
 
 dnf installed list nginx
-if [ $? -eq 0 ]; then
-    echo " Mysql is already installed "
-else
-    echo " mysql is not installed previously "
 
-dnf install nginx -y
+if [ $? -ne 0 ]; then
+    echo " Nginx is not installed previously "
+    echo " Going to install"
+    dnf install nginx -y
     if [ $? -eq 0 ];then
 
-        echo " mysql installed sucessfully"
+        echo " Nginx installed sucessfully"
     else
         echo " failed to install "
         exit 1
     fi
+
+else
+    echo " Nginx already installed "
+fi
+
+
+
 
