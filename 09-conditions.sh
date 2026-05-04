@@ -9,7 +9,7 @@ else
     echo " Error:Running with normal user"
 fi
 
-dnf installed list nginx
+dnf list installed  nginx
 
 if [ $? -ne 0 ]; then
     echo " Nginx is not installed previously "
