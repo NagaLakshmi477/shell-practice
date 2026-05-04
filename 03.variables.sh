@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PER1: "Ram"
-PER2: "sita"
+PER1=Ram
+PER2=sita
 
 echo " hello $PER1 "
 echo " Hi $PER2 "
