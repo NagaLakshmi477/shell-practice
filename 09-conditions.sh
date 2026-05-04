@@ -12,7 +12,7 @@ fi
 if [ $? -eq 0 ]; then
 
 
-    dnf install mysqlu
+    dnf install mysql -y
     if [ $? -eq 0 ];then
 
     echo " mysql installed sucessfully"
